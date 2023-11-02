@@ -32,3 +32,19 @@ export const getArticles = async (querryString) => {
     throw error;
   }
 };
+
+export const getArticle = async (querryString) => {
+  try {
+    const res = await fetch(`${apiUrl}/api/articles?${querryString}`, {
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+      },
+    });
+
+    // const { data } = await res.json();
+    return res.json();
+  } catch (error) {
+    console.error("Error fetching categories:", error);
+    throw error;
+  }
+};

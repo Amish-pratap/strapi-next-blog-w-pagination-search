@@ -6,7 +6,7 @@ import React from "react";
 const BlogCard = ({ article }) => {
   return (
     <div>
-      <Link href="#">
+      <Link href={`/article/${article.attributes.slug}`}>
         <h1 className="text-xl text-gray-600 font-bold hover:decoration-2 hover:underline hover:cursor-pointer hover:decoration-primary">
           {article.attributes.title}
         </h1>

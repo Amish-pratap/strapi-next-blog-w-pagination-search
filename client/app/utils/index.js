@@ -1,3 +1,5 @@
+import { serialize } from "next-mdx-remote/serialize";
+
 export const formatDate = (dateString) => {
   const date = new Date(dateString).toLocaleDateString("en-US", {
     weekday: "long",
